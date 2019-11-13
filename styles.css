@@ -1,0 +1,41 @@
+.calc{
+    top: 250px; 
+    left: 250px;
+    border: 10px;
+    border-color: black;
+  }
+button{
+    text-align: center;
+    width: 50px;
+    height: 35px;
+    font-family: Tahoma;
+}
+  #result{
+    background-color: white;
+    width: 211px;
+    text-align: right;
+    font-size: 30px;
+    font-family: Tahoma;
+  }
+  #archive{
+    background-color: white;
+    width: 211px;
+    text-align: right;
+    font-family: Tahoma;
+    font-size: 13px;
+    color: grey;
+  }
+#idC, #idCE, #idClear{
+    background-color: coral;
+    text-align: center;
+    width: 50px;
+    height: 35px;
+    font-family: Tahoma;
+}
+#idEqual{
+    background-color: yellowgreen;
+    text-align: center;
+    width: 50px;
+    height: 35px;
+    font-family: Tahoma;
+}
