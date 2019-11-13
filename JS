@@ -1,0 +1,223 @@
+var firstNum = 0;
+var secondNum = 0;
+var sign = 0;
+
+function btnCE() {
+  //alert('CE');
+  document.getElementById("result").innerHTML = '0';
+}
+document.getElementById('idCE').addEventListener("click", btnCE);
+
+function btnC() {
+ // alert('C');
+ document.getElementById("result").innerHTML = '0';
+ document.getElementById("archive").innerHTML = "Let's start"
+}
+document.getElementById('idC').addEventListener("click", btnC);
+
+function btnClear() {
+  alert('<-');
+}
+document.getElementById('idClear').addEventListener("click", btnClear);
+
+function btnDiv() {
+  //alert('/');
+  firstNum = parseInt(document.getElementById("result").innerHTML);
+  document.getElementById("archive").innerHTML = firstNum + '/';
+  sign = '/';
+  document.getElementById("result").innerHTML = '';
+  secondNum = parseInt(document.getElementById("result").innerHTML);
+}
+document.getElementById('idDiv').addEventListener("click", btnDiv);
+
+//-------------------------------
+function btn7() {
+  var text = document.getElementById('id7').innerHTML;
+  //alert(text); // не нужен этот алерт
+  var elem = document.getElementById('result').innerHTML;
+  if (elem === '0') {
+    document.getElementById("result").innerHTML = " "; 
+  }
+  document.getElementById("result").innerHTML += text;
+}
+document.getElementById('id7').addEventListener("click", btn7);
+
+function btn8() {
+  //alert('8');
+  var text = document.getElementById('id8').innerHTML;
+  //alert(text); // не нужен этот алерт
+  var elem = document.getElementById('result').innerHTML;
+  if (elem === '0') {
+    document.getElementById("result").innerHTML = " "; 
+  }
+  document.getElementById("result").innerHTML += text;
+}
+document.getElementById('id8').addEventListener("click", btn8);
+
+function btn9() {
+  //alert('9');
+  var text = document.getElementById('id9').innerHTML;
+  //alert(text); // не нужен этот алерт
+  var elem = document.getElementById('result').innerHTML;
+  if (elem === '0') {
+    document.getElementById("result").innerHTML = " "; 
+  }
+  document.getElementById("result").innerHTML += text;
+}
+document.getElementById('id9').addEventListener("click", btn9);
+
+function btnMult() {
+ // alert('x');
+ firstNum = document.getElementById("result").innerHTML;
+ document.getElementById("archive").innerHTML = firstNum + '*';
+ sign = '*';
+}
+document.getElementById('idMult').addEventListener("click", btnMult);
+
+//--------------------------------
+function btn4() {
+ // alert('4');
+  var text = document.getElementById('id4').innerHTML;
+  //alert(text); // не нужен этот алерт
+  var elem = document.getElementById('result').innerHTML;
+  if (elem === '0') {
+    document.getElementById("result").innerHTML = " "; 
+  }
+  document.getElementById("result").innerHTML += text;
+}
+document.getElementById('id4').addEventListener("click", btn4);
+
+function btn5() {
+  //alert('5');
+  var text = document.getElementById('id5').innerHTML;
+  //alert(text); // не нужен этот алерт
+  var elem = document.getElementById('result').innerHTML;
+  if (elem === '0') {
+    document.getElementById("result").innerHTML = " "; 
+  }
+  document.getElementById("result").innerHTML += text;
+}
+document.getElementById('id5').addEventListener("click", btn5);
+
+function btn6() {
+  var text = document.getElementById('id6').innerHTML;
+  //alert(text); // не нужен этот алерт
+  var elem = document.getElementById('result').innerHTML;
+  if (elem === '0') {
+    document.getElementById("result").innerHTML = " "; 
+  }
+  document.getElementById("result").innerHTML += text;
+  //alert('6');
+}
+document.getElementById('id6').addEventListener("click", btn6);
+
+function btnMinus() {
+  //alert('-');
+  firstNum = document.getElementById("result").innerHTML;
+  document.getElementById("archive").innerHTML = firstNum + '-';
+  sign = '-';
+}
+document.getElementById('idMinus').addEventListener("click", btnMinus);
+
+//--------------------------------
+function btn1() {
+  //alert('1');
+  var text = document.getElementById('id1').innerHTML;
+  //alert(text); // не нужен этот алерт
+  var elem = document.getElementById('result').innerHTML;
+  if (elem === '0') {
+    document.getElementById("result").innerHTML = " "; 
+  }
+  document.getElementById("result").innerHTML += text;
+}
+document.getElementById('id1').addEventListener("click", btn1);
+
+function btn2() {
+ // alert('2');
+  var text = document.getElementById('id2').innerHTML;
+  //alert(text); // не нужен этот алерт
+  var elem = document.getElementById('result').innerHTML;
+  if (elem === '0') {
+    document.getElementById("result").innerHTML = " "; 
+  }
+  document.getElementById("result").innerHTML += text;
+}
+document.getElementById('id2').addEventListener("click", btn2);
+
+function btn3() {
+  var text = document.getElementById('id3').innerHTML;
+  //alert(text); // не нужен этот алерт
+  var elem = document.getElementById('result').innerHTML;
+  if (elem === '0') {
+    document.getElementById("result").innerHTML = " "; 
+  }
+  document.getElementById("result").innerHTML += text;
+  var length = elem.length;
+  if (length > 12) {
+    //как сгенерировать ошибку?
+  }
+}
+document.getElementById('id3').addEventListener("click", btn3);
+
+function btnPlus() {
+  //alert('+');
+  firstNum = document.getElementById("result").innerHTML;
+  document.getElementById("archive").innerHTML = firstNum + '+';
+  sign = '+';
+}
+document.getElementById('idPlus').addEventListener("click", btnPlus);
+
+//--------------------------------
+function btnPM() {
+  //alert('+/-');
+  var num = parseInt(document.getElementById("result").innerHTML);
+  if (num > 0) {
+    num *= -1;
+  }
+  document.getElementById("result").innerHTML = num;
+  document.getElementById("archive").innerHTML = num;
+}
+document.getElementById('idPM').addEventListener("click", btnPM);
+
+function btn0() {
+  //alert('0');
+  var text = document.getElementById('id0').innerHTML;
+  //alert(text); // не нужен этот алерт
+  var elem = document.getElementById('result').innerHTML;
+  if (elem === '0') {
+    document.getElementById("result").innerHTML = " "; 
+  }
+  document.getElementById("result").innerHTML += text;
+}
+document.getElementById('id0').addEventListener("click", btn0);
+
+function btnDot() {
+  alert('.');
+}
+document.getElementById('idDot').addEventListener("click", btnDot);
+
+function btnEqual() {
+  //alert('=');
+  /*var num1 = parseInt(document.getElementById("archive").innerHTML);
+  var num2 = document.getElementById("result").innerHTML;
+  num2 = parseInt(num2.slice(1));
+  var res = 0;
+  var plus = document.getElementById('idPlus').innerHTML;
+  var minus = document.getElementById('idMinus').innerHTML
+  var mult = document.getElementById('idMult').innerHTML;
+  var div = document.getElementById('idDiv').innerHTML;
+  if (sign === '+') {
+    res = num1 + num2;
+  }
+  document.getElementById("result").innerHTML = res;*/
+  firstNum = +document.getElementById("archive").innerHTML.slice(0,1);//найти ошибку
+  secondNum = +document.getElementById("result").innerHTML;
+  var res = 0;
+  if (sign === '+') {
+    res = firstNum + secondNum;
+    document.getElementById("result").innerHTML = res;
+  }
+}
+document.getElementById('idEqual').addEventListener("click", btnEqual);
+
+
